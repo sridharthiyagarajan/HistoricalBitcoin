@@ -1,0 +1,10 @@
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (1, '2024-01-01', 43850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'USD');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (2, '2024-01-01', 48850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'INR');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (3, '2024-02-01', 42850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'USD');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (4, '2024-02-01', 34850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'INR');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (5, '2024-03-01', 22850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'USD');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (6, '2024-03-01', 67850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'INR');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (7, '2024-04-01', 12850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'USD');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (8, '2024-04-01', 11850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'INR');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (9, '2024-05-01', 88850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'USD');
+INSERT INTO bitcoin_prices (id, price_date, price, created_date, created_by, modified_date, modified_by, currency) VALUES (10, '2024-05-01', 99850.12, CURRENT_DATE, 'SYSTEM', CURRENT_DATE, 'SYSTEM', 'INR');

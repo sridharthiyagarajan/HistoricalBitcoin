@@ -1,0 +1,91 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 20px;
+  }
+  
+  /* Form Styles */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input[type="date"],
+  form input[type="text"],
+  form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  form button:disabled {
+    background-color: #ccc;
+  }
+  
+  /* Loader */
+  p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* History List */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  strong {
+    color: #007bff;
+  }
+
+  .clickable {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clickable:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
