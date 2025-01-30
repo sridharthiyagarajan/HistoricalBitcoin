@@ -6,6 +6,10 @@ import HistoryList from './components/HistoryList';
 import DetailPage from './components/DetailPage';
 import './styles.css';
 
+const username = 'admin';
+const password = 'admin';
+const encodedCredentials = btoa(`${username}:${password}`);
+
 const App = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -21,6 +25,10 @@ const App = () => {
     try {
       const response = await axios.get('/bitcoin-history', {
         params: { startDate, endDate, useOfflineData, currency },
+        headers: {
+          'Authorization': `Basic ${encodedCredentials}`,
+          'Content-Type': 'application/json'
+        }
       });
       setHistoryData(response.data);
     } catch (error) {
