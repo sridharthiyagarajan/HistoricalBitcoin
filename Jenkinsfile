@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build UI Docker Image') {
             steps {
-                sh 'docker build -t ui-app:latest ./bitcoinui'
+                sh 'sudo docker build -t ui-app:latest ./bitcoinui'
             }
         }
 
