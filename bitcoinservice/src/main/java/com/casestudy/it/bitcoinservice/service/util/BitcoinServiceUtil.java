@@ -1,5 +1,7 @@
 package com.casestudy.it.bitcoinservice.service.util;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,5 +25,32 @@ public class BitcoinServiceUtil {
 		return bitcoinEntityDTOs.stream()
 				.map(bitcoinPrice -> new BitcoinDTO(bitcoinPrice.getPriceDate(), bitcoinPrice.getPrice(), "NORMAL"))
 				.collect(Collectors.toList());
+	}
+
+	public static String retrieveDateInStringFormat(LocalDate inputDate) {
+
+		String outputStrDate = null;
+
+		if (inputDate != null) {
+
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			outputStrDate = inputDate.format(formatter);
+		}
+
+		return outputStrDate;
+	}
+
+	public static LocalDate retrieveDateStringInDateFormat(String inputStrDate) {
+
+		LocalDate outputLocalDate = null;
+
+		if (inputStrDate != null && !inputStrDate.isEmpty()) {
+
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+			outputLocalDate = LocalDate.parse(inputStrDate, formatter);
+		}
+
+		return outputLocalDate;
 	}
 }

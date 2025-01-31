@@ -36,15 +36,12 @@ public class BitcoinController {
 	public ResponseEntity<List<BitcoinDTO>> getBitcoinHistoryForGivenDateRange(
 			@RequestParam @NotNull(message = "{validation.start.date.empty.error}") @Past(message = "{validation.start.date.past.error}") LocalDate startDate,
 			@RequestParam @NotNull(message = "{validation.end.date.empty.error}") @Past(message = "{validation.end.date.past.error}") LocalDate endDate,
-			@RequestParam(defaultValue = "USD") @Pattern(regexp = "USD|INR", message = "{validation.currency.error}" )String currency,
+			@RequestParam(defaultValue = "USD") @Pattern(regexp = "USD|INR", message = "{validation.currency.error}") String currency,
 			@RequestParam(defaultValue = "false") boolean useOfflineData) {
 
 		List<BitcoinDTO> response = null;
 
-		if (useOfflineData) {
-			response = bitcoinService.getBitcoinHistoryForGivenDateRange(startDate, endDate, currency, useOfflineData);
-		} else {
-		}
+		response = bitcoinService.getBitcoinHistoryForGivenDateRange(startDate, endDate, currency, useOfflineData);
 
 		return ResponseEntity.ok(response);
 	}
@@ -61,7 +58,7 @@ public class BitcoinController {
 		if (outputBitcoinDTO == null) {
 			throw new BitcoinPriceNotFoundException("id: " + id);
 		}
-		
+
 		EntityModel<BitcoinDTO> outputEntityModel = EntityModel.of(outputBitcoinDTO);
 
 		// Add link to the filtered list with specific query parameters
