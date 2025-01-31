@@ -1,16 +1,10 @@
 pipeline {
     agent any
 
-    stage('Cleanup') {
+    stages {
+        stage('Checkout Code') {
             steps {
-                script {
-                    deleteDir()  // Deletes everything in the workspace
-                }
-            }
-        }
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/sridharthiyagarajan/HistoricalBitcoin.git'
+                git 'https://github.com/sridharthiyagarajan/HistoricalBitcoin.git'
             }
         }
 
