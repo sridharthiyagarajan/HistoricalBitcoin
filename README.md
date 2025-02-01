@@ -30,16 +30,24 @@ docker push sridharthiyagarajan7/historical-bitcoin-ui:latest
 Please follow steps as mentioned below for building, creating an image and pushing the backend module to docker hub.
 
 # Build the Docker image
-docker build -t bitcoin-backend .
+docker build -t bitcoinservice .
+(Note: I have used spring boot plugin way due to JDK version availability limitation in my local setup.)
 
 # Tag the image for Docker Hub
-docker tag bitcoin-backend:latest sridharthiyagarajan7/historical-bitcoin-backend:latest
+docker tag bitcoinservice:latest sridharthiyagarajan7/historical-bitcoin-service:latest
 
 # Push the image to Docker Hub
-docker push sridharthiyagarajan7/historical-bitcoin-backend:latest
+docker push sridharthiyagarajan7/historical-bitcoin-service:latest
 
 Alternate way to create backend module image using spring-boot maven plugin:
 <img width="1726" alt="image" src="https://github.com/user-attachments/assets/363c1f7a-95e9-424e-9c56-e909558cbf00" />
+
+# ********** DOCKER COMMANDS TO BRING APPLICATION UP AND RUNNING **********
+docker run -d -p 3000:3000 --name bitcoinuidocker sridharthiyagarajan7/historical-bitcoin-ui
+docker run -d -p 8080:8080 --name bitcoinservicedocker sridharthiyagarajan7/historical-bitcoin-service
+
+# ********** DOCKER IMAGES IN DOCKER HUB **********
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/252e3711-dd45-4374-bba3-f0fd37b86125" />
 
 # ********** SEQUENCE DIAGRAM **********
 # USE OFFLINE DATA as TRUE
