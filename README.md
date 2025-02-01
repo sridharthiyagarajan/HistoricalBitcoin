@@ -1,7 +1,7 @@
-Application High Level Flow Diagram:
+# Application High Level Flow Diagram
 ![image](https://github.com/user-attachments/assets/5fe84dd7-f5f7-45b6-9121-941a9f213893)
 
-**HOW TO BUILD FRONTEND:**
+# ********** HOW TO BUILD FRONTEND **********
 Please follow steps as mentioned below for building, creating an image and pushing the frontend module to docker hub.
 
 # Install dependencies
@@ -19,7 +19,7 @@ docker tag bitcoinui:latest sridharthiyagarajan7/historical-bitcoin-ui:latest
 # Push the image to Docker Hub
 docker push sridharthiyagarajan7/historical-bitcoin-ui:latest
 
-**HOW TO BUILD BACKEND:**
+# ********** HOW TO BUILD BACKEND **********
 Please follow steps as mentioned below for building, creating an image and pushing the backend module to docker hub.
 
 # Build the Docker image
