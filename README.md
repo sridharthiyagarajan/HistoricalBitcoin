@@ -41,5 +41,9 @@ Alternate way to create backend module image using spring-boot maven plugin:
 # USE OFFLINE DATA as FALSE
 ![image](https://github.com/user-attachments/assets/68623633-6dc6-43c1-ab94-aebd9c817774)
 
+# ********** CLASS DIAGRAM **********
+# com.casestudy.it.bitcoinservice.rest.controller.BitcoinController:
+This class contains REST API method implementations.
+![image](https://github.com/user-attachments/assets/dc82d575-bdb4-4b9d-a77f-fdff947fda6b)
 
 
