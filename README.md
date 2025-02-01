@@ -1,5 +1,12 @@
-# Application High Level Flow Diagram
+# APPLICATION - HIGH LEVEL FLOW DIAGRAM
 ![image](https://github.com/user-attachments/assets/5fe84dd7-f5f7-45b6-9121-941a9f213893)
+
+# ********** SUMMARY **********
+This system is built with a ReactJS front end, providing a dynamic and responsive user interface where users can input data such as start and end dates, currency, and an offline flag to switch between using local or real-time data. Axios is used in the front end to make HTTP requests to the backend, ensuring smooth communication and data exchange.
+
+The backend is powered by Spring Boot, which handles all the core logic of the application. It manages requests from the frontend, processes data, and interacts with various components. For real-time Bitcoin data, the backend integrates with the CoinDesk API using RestTemplate, allowing the system to fetch up-to-date Bitcoin prices. When offline mode is enabled, the backend retrieves Bitcoin price data from a local H2 database, which stores historical data for offline use.
+
+Together, this architecture combines a modern and flexible front-end technology (ReactJS), a powerful and scalable backend (Spring Boot), efficient HTTP communication (Axios), and seamless data integration from an external service (CoinDesk API), with the ability to store data locally for offline use (H2 database). This setup creates a robust and user-friendly solution for tracking Bitcoin prices.
 
 # ********** HOW TO BUILD FRONTEND **********
 Please follow steps as mentioned below for building, creating an image and pushing the frontend module to docker hub.
@@ -62,9 +69,12 @@ The BitcoinRepository interface extends JpaRepository and provides a method to r
 The BitcoinCurrencyRepository interface extends JpaRepository and provides methods to fetch Bitcoin currency data based on currency or a combination of currency and country. It interacts with the database to retrieve and manage Bitcoin currency entities.
 ![image](https://github.com/user-attachments/assets/f20fb0e0-da30-498b-933d-5692fc63bfcf)
 
-Limitations:
+# Limitations:
 Jenkins is installed locally and running, but after installing required pipeline and GIT plugins, the pipeline failed to trigger due to admin permission issues with Docker commands in the local machine setup.
 ![image](https://github.com/user-attachments/assets/f92c44b1-c282-4527-954a-7d64a3071e51)
+
+# ********** TEST CASES CODE COVERAGE **********
+![image](https://github.com/user-attachments/assets/1f604525-5116-4a1b-bb8e-550fbc711af7)
 
 
 
