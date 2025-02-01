@@ -22,8 +22,14 @@ const App = () => {
     event.preventDefault();
     setLoading(true);
 
+  const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:8080"
+    : "http://bitcoinservice:8080";
+
+
     try {
-      const response = await axios.get('/bitcoin-history', {
+      const response = await axios.get(`${API_URL}/bitcoin-history`, {
         params: { startDate, endDate, useOfflineData, currency },
         headers: {
           'Authorization': `Basic ${encodedCredentials}`,
