@@ -145,6 +145,11 @@ public class BitcoinServiceImpl implements BitcoinService {
 					.getPrice();
 
 			outputBitcoinDTOs.forEach(dto -> {
+
+				if (LOG.isDebugEnabled()) {
+					LOG.debug(String.format("In populateHighAndLowBitcoinPrices - %s.", dto));
+				}
+
 				if (dto.getPrice() == maxPrice) {
 					dto.setPriceType(BitcoinPriceType.HIGH.name());
 				} else if (dto.getPrice() == minPrice) {
@@ -178,7 +183,7 @@ public class BitcoinServiceImpl implements BitcoinService {
 		}
 
 		if (LOG.isDebugEnabled()) {
-			LOG.debug("In getBitcoinPriceById - ENDED.");
+			LOG.debug(String.format("In getBitcoinPriceById - ENDED and the output is: %s.", outputBitcoinDTO));
 		}
 
 		return outputBitcoinDTO;

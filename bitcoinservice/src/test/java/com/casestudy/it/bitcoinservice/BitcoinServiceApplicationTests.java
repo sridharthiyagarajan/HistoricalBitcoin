@@ -1,13 +1,13 @@
-package com.casestudy.it.bitcoin_service;
+package com.casestudy.it.bitcoinservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BitcoinServiceApplicationTests {
+public class BitcoinServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// This test will check if the Spring application context loads without issues.
 	}
-
 }
