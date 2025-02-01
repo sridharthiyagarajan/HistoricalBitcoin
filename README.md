@@ -42,6 +42,10 @@ docker push sridharthiyagarajan7/historical-bitcoin-service:latest
 Alternate way to create backend module image using spring-boot maven plugin:
 <img width="1726" alt="image" src="https://github.com/user-attachments/assets/363c1f7a-95e9-424e-9c56-e909558cbf00" />
 
+# ********** DOCKER COMMANDS TO BRING APPLICATION UP AND RUNNING **********
+docker run -d -p 3000:3000 --name bitcoinuidocker sridharthiyagarajan7/historical-bitcoin-ui
+docker run -d -p 8080:8080 --name bitcoinservicedocker sridharthiyagarajan7/historical-bitcoin-service
+
 # ********** DOCKER IMAGES IN DOCKER HUB **********
 <img width="1728" alt="image" src="https://github.com/user-attachments/assets/252e3711-dd45-4374-bba3-f0fd37b86125" />
 
