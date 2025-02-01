@@ -1,13 +1,13 @@
 package com.casestudy.it.bitcoinservice.exception;
 
 /**
- * Bitcoin price not found exception.
+ * Bitcoin currency invalid exception.
  * 
  * 
  * @author SridharThiyagarajan
  *
  */
-public class BitcoinPriceNotFoundException extends RuntimeException {
+public class BitcoinCurrencyInvalidException extends RuntimeException {
 
 	/**
 	 * Default serial version UID.
@@ -19,7 +19,7 @@ public class BitcoinPriceNotFoundException extends RuntimeException {
 	 * 
 	 * @param message
 	 */
-	public BitcoinPriceNotFoundException(String message) {
+	public BitcoinCurrencyInvalidException(String message) {
 		super(message);
 	}
 

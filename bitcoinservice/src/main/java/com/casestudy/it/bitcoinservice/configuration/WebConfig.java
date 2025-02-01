@@ -7,9 +7,21 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * Web configuration.
+ * 
+ * 
+ * @author SridharThiyagarajan
+ *
+ */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+	/**
+	 * This method is used to return message source reference.
+	 * 
+	 * @return MessageSource
+	 */
 	@Bean
 	public MessageSource messageSource() {
 
@@ -20,14 +32,15 @@ public class WebConfig implements WebMvcConfigurer {
 
 		return messageSource;
 	}
-	
+
+	/**
+	 * This method is used to add CORS mappings.
+	 */
 	@Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
-                .allowedHeaders("*")
-                .allowCredentials(true)
-                .maxAge(3600);
-    }
+	public void addCorsMappings(CorsRegistry registry) {
+
+		registry.addMapping("/**").allowedOrigins("http://localhost:3000")
+				.allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS").allowedHeaders("*")
+				.allowCredentials(true).maxAge(3600);
+	}
 }

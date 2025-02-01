@@ -7,14 +7,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 /**
- * Entity DTO for bitcoin price.
+ * Entity DTO for bitcoin currency.
  * 
  * 
  * @author SridharThiyagarajan
  *
  */
-@Entity(name = "bitcoin_prices")
-public class BitcoinEntityDTO {
+@Entity(name = "bitcoin_currency")
+public class BitcoinCurrencyEntityDTO {
 
 	/**
 	 * Identifier.
@@ -24,9 +24,14 @@ public class BitcoinEntityDTO {
 	private long id;
 
 	/**
-	 * Price date.
+	 * ISO currency code.
 	 */
-	private LocalDate priceDate;
+	private String currency;
+
+	/**
+	 * Country description.
+	 */
+	private String country;
 
 	/**
 	 * Created by user.
@@ -49,36 +54,22 @@ public class BitcoinEntityDTO {
 	private String modifiedBy;
 
 	/**
-	 * Price.
-	 */
-	private double price;
-
-	/**
-	 * Currency.
-	 */
-	private String currency;
-
-	/**
 	 * Constructor.
 	 */
-	public BitcoinEntityDTO() {
+	public BitcoinCurrencyEntityDTO() {
 		super();
 	}
 
 	/**
 	 * Constructor.
 	 * 
-	 * @param id
-	 * @param priceDate
-	 * @param price
 	 * @param currency
+	 * @param country
 	 */
-	public BitcoinEntityDTO(long id, LocalDate priceDate, double price, String currency) {
+	public BitcoinCurrencyEntityDTO(String currency, String country) {
 		super();
-		this.id = id;
-		this.priceDate = priceDate;
-		this.price = price;
 		this.currency = currency;
+		this.country = country;
 	}
 
 	/**
@@ -100,39 +91,39 @@ public class BitcoinEntityDTO {
 	}
 
 	/**
-	 * This method is used to get price date.
+	 * This method is used to get ISO currency code.
 	 * 
-	 * @return LocalDate
+	 * @return String
 	 */
-	public LocalDate getPriceDate() {
-		return priceDate;
+	public String getCurrency() {
+		return currency;
 	}
 
 	/**
-	 * This method is used to set price date.
+	 * This method is used to set ISO currency code.
 	 * 
-	 * @param priceDate
+	 * @param currency
 	 */
-	public void setPriceDate(LocalDate priceDate) {
-		this.priceDate = priceDate;
+	public void setCurrency(String currency) {
+		this.currency = currency;
 	}
 
 	/**
-	 * This method is used to get price.
+	 * This method is used to get country description.
 	 * 
-	 * @return double
+	 * @return String
 	 */
-	public double getPrice() {
-		return price;
+	public String getCountry() {
+		return country;
 	}
 
 	/**
-	 * This method is used to set price.
+	 * This method is used to set country description.
 	 * 
-	 * @param price
+	 * @param country
 	 */
-	public void setPrice(double price) {
-		this.price = price;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	/**
@@ -207,29 +198,11 @@ public class BitcoinEntityDTO {
 		this.modifiedBy = modifiedBy;
 	}
 
-	/**
-	 * This method is used to get currency.
-	 * 
-	 * @return String
-	 */
-	public String getCurrency() {
-		return currency;
-	}
-
-	/**
-	 * This method is used to set currency.
-	 * 
-	 * @param currency
-	 */
-	public void setCurrency(String currency) {
-		this.currency = currency;
-	}
-
 	@Override
 	public String toString() {
-		return "BitcoinEntityDTO [id=" + id + ", priceDate=" + priceDate + ", createdDate=" + createdDate
-				+ ", createdBy=" + createdBy + ", modifiedDate=" + modifiedDate + ", modifiedBy=" + modifiedBy
-				+ ", price=" + price + ", currency=" + currency + "]";
+		return "BitcoinCurrencyEntityDTO [id=" + id + ", currency=" + currency + ", country=" + country + ", createdBy="
+				+ createdBy + ", createdDate=" + createdDate + ", modifiedDate=" + modifiedDate + ", modifiedBy="
+				+ modifiedBy + "]";
 	}
 
 }
