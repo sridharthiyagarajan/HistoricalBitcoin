@@ -31,6 +31,7 @@ Please follow steps as mentioned below for building, creating an image and pushi
 
 # Build the Docker image
 docker build -t bitcoinservice .
+(Note: I have used spring boot plugin way due to JDK version availability limitation in my local setup.)
 
 # Tag the image for Docker Hub
 docker tag bitcoinservice:latest sridharthiyagarajan7/historical-bitcoin-service:latest
@@ -40,6 +41,9 @@ docker push sridharthiyagarajan7/historical-bitcoin-service:latest
 
 Alternate way to create backend module image using spring-boot maven plugin:
 <img width="1726" alt="image" src="https://github.com/user-attachments/assets/363c1f7a-95e9-424e-9c56-e909558cbf00" />
+
+# ********** DOCKER IMAGES IN DOCKER HUB **********
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/252e3711-dd45-4374-bba3-f0fd37b86125" />
 
 # ********** SEQUENCE DIAGRAM **********
 # USE OFFLINE DATA as TRUE
