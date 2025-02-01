@@ -60,6 +60,13 @@ The BitcoinRepository interface extends JpaRepository and provides a method to r
 
 # com.casestudy.it.bitcoinservice.db.repository.BitcoinCurrencyRepository:
 The BitcoinCurrencyRepository interface extends JpaRepository and provides methods to fetch Bitcoin currency data based on currency or a combination of currency and country. It interacts with the database to retrieve and manage Bitcoin currency entities.
+![image](https://github.com/user-attachments/assets/f20fb0e0-da30-498b-933d-5692fc63bfcf)
+
+Limitations:
+Jenkins is installed locally and running, but after installing required pipeline and GIT plugins, the pipeline failed to trigger due to admin permission issues with Docker commands in the local machine setup.
+![image](https://github.com/user-attachments/assets/f92c44b1-c282-4527-954a-7d64a3071e51)
+
+
 
 
 
