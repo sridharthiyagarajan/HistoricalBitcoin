@@ -33,3 +33,13 @@ docker push sridharthiyagarajan7/historical-bitcoin-backend:latest
 
 Alternate way to create backend module image using spring-boot maven plugin:
 <img width="1726" alt="image" src="https://github.com/user-attachments/assets/363c1f7a-95e9-424e-9c56-e909558cbf00" />
+
+# ********** SEQUENCE DIAGRAM **********
+# USE OFFLINE DATA as TRUE
+<img width="578" alt="image" src="https://github.com/user-attachments/assets/5ed7b9c5-f747-4a38-b635-54c13603c556" />
+
+# USE OFFLINE DATA as FALSE
+![image](https://github.com/user-attachments/assets/68623633-6dc6-43c1-ab94-aebd9c817774)
+
+
+
