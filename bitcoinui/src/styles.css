@@ -87,5 +87,12 @@ body {
   .clickable:hover {
     background-color: #f0f0f0;
   }
+
+  .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }  
   
   
