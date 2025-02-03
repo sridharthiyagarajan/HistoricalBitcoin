@@ -54,6 +54,9 @@ docker run -d -p 8080:8080 --name bitcoinservicedocker sridharthiyagarajan7/hist
 ## ********** DOCKER IMAGES IN DOCKER HUB **********
 <img width="1728" alt="image" src="https://github.com/user-attachments/assets/252e3711-dd45-4374-bba3-f0fd37b86125" />
 
+## ********** SWAGGER UI **********
+<img width="1728" alt="image" src="https://github.com/user-attachments/assets/739593df-9b08-496a-b8ee-97146e9eb4b5" />
+
 ## ********** SEQUENCE DIAGRAM **********
 ### USE OFFLINE DATA as TRUE
 <img width="578" alt="image" src="https://github.com/user-attachments/assets/5ed7b9c5-f747-4a38-b635-54c13603c556" />
